@@ -8,16 +8,20 @@ from email.mime.text import MIMEText
 from email import encoders
 import os
 
-from random_cat import getRandomCat
+# My module for getting a random cat picture
+from random_pic import getRandomPic
+from random_pic import getRandomCat
+from random_pic import getRandomLeague
 
-gmail_user = "leifrf@gmail.com"
+gmail_user = input("Your gmail address:")
 gmail_pwd = getpass.getpass()
 
 receiver = "firthk@limestone.on.ca"
 title = "Hello World!"
 message = "HAL 9000"
 #attachment = "cat.jpg"
-attachment = getRandomCat()
+#attachment = getRandomCat()
+attachment = getRandomPic("\\league")
 
 def mail(to, subject, text, attach):
    msg = MIMEMultipart()
