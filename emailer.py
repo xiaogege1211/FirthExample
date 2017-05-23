@@ -16,12 +16,15 @@ from random_pic import getRandomLeague
 gmail_user = input("Your gmail address:")
 gmail_pwd = getpass.getpass()
 
-receiver = "firthk@limestone.on.ca"
+#receiver = "firthk@limestone.on.ca"
+receiver = input("Recipient's email address:")
+
 title = "Hello World!"
 message = "HAL 9000"
+
 #attachment = "cat.jpg"
 #attachment = getRandomCat()
-attachment = getRandomPic("\\league")
+attachment = getRandomPic("league")
 
 def mail(to, subject, text, attach):
    msg = MIMEMultipart()
